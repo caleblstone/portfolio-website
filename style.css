@@ -40,14 +40,20 @@ a{
 }
 a:hover{
   color: #FDB32B;
+  cursor: zoom-in;
 }
 
 div.header{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
-div.home:hover{
+div.home header{
+  text-decoration: underline;
+}
+div.home header:hover{
   color: #FE4818;
+  text-decoration-color: #FE4818;
 }
 
 div.button{
@@ -62,6 +68,13 @@ div.button:hover{
 div.bioButton:hover{
   color: #F1DFD2;
   cursor: pointer;
+  text-decoration-color: #F1DFD2;
+}
+div.proj header{
+  display: none;
+}
+div.proj header:hover{
+  color: black;
 }
 
 
@@ -97,7 +110,6 @@ div.projects{
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
   overflow: scroll;
-  margin-bottom: 24px;
 }
 
 div.bio{
@@ -131,6 +143,16 @@ div.introduction img{
   height: auto;
 }
 
+div.wrapAround{
+  text-align: left;
+}
+div.wrapAround img{
+  float: left;
+  width: 33%;
+  margin-right: 24px;
+  margin-bottom: 10px;
+}
+
 div.imgGrid{
   display: flex;
   flex-direction: row;
@@ -146,10 +168,11 @@ div.projectGrid{
   display: grid;
   grid-template-rows: auto;
   grid-row-gap: 24px;
+  margin-bottom: 24px;
 }
 div.project{
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 4% 71% 25%;
   border: 4px solid black;
   overflow: hidden;
   word-wrap: break-word;
@@ -157,12 +180,35 @@ div.project{
 }
 div.project:hover{
   background-color: #FE4818;
+  cursor: pointer;
+}
+div.inProgress:hover{
+  background-color: grey;
+  cursor: not-allowed;
 }
 div.project div{
   /* padding: 8px;
   display:flex;
   flex-direction:column;
   justify-content:space-around; */
+}
+
+div.client{
+  display: flex;
+  background-color: #FDB32B;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-right: 4px solid black;
+  writing-mode: vertical-lr;
+  justify-content: center;
+  align-items: center;
+
+}
+div.clientWords{
+transform: rotate(180deg);
+font-size: 18px;
+font-family: cursive;
+
 }
 
 div.name{
@@ -194,7 +240,12 @@ div.about{
   font-family: cursive;
   margin-top: 24px;
   margin-bottom: 24px;
+
 }
+div.bioAbout{
+  text-decoration: underline;
+}
+
 div.contact{
   display: none;
   font-size: 24px;
