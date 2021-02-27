@@ -1,0 +1,419 @@
+@font-face {
+  font-family: "Circular";
+  src: url("assets/CircularStd-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Circular Bold";
+  src: url("assets/CircularStd-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Circular Black";
+  src: url("assets/CircularStd-Black.ttf");
+}
+
+@keyframes jiggle {
+  0% {transform: rotate(8deg);}
+  50% {transform: rotate(0deg);}
+  100% {transform: rotate(8deg);}
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes spin {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(359deg);}
+}
+
+
+body{
+  margin: 0px;
+  font-family: "Circular";
+  font-size: 24px;
+  background-color: #F4F4F1;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  background-color: #282E34;
+  height: 80px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 4;
+  box-shadow: 0px 0px 5px rgba();
+}
+
+header div.head{
+  margin-left: 32px;
+  color: #F4F4F1;
+  font-size: 48px;
+  line-height: 100%;
+}
+
+header a{
+  margin-right: 32px;
+  color: #F4F4F1;
+  text-decoration: none;
+}
+
+section.sidebar{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 2390px;
+  bottom: 0px;
+  left: 96px;
+  height: 96px;
+  background-color: #D03325;
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
+  color: #F4F4F1;
+}
+
+section div.marquee{
+  width: 100%
+  position: relative;
+  display: inline-block;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 16px;
+  overflow: hidden;
+  animation: marquee 1.5s linear infinite;
+}
+
+section div.marquee svg{
+  display: inline-block;
+  width: 64px;
+  height: 80px;
+  margin-top: 3px;
+}
+
+section div.marquee div.pow svg{
+  width: 153px;
+  height: 80px;
+  stroke: #282E34;
+  stroke-width: 2px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+div.pow{
+  position: relative;
+  display: inline-block;
+  transform-origin: center;
+  transform: rotate(8deg);
+}
+
+div.powtxt{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+  color: #282E34;
+  z-index: 5;
+}
+
+section.hero{
+  position: relative;
+  margin-left: 96px;
+  top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+section.hero div.heroCont{
+  height: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+section.hero video{
+  position: absolute;
+  object-fit: cover;
+  min-width: 100%;
+  right: 0px;
+}
+
+section.hero svg{
+  height: 100%;
+}
+
+section.hero a div.pow{
+  position: absolute;
+  top: -30px;
+  right: -55px;
+  transform-origin: center;
+}
+
+div.powHeroTxt{
+  color: #F4F4F2;
+}
+
+div.powHero{
+  position: absolute;
+  top: 0px;
+}
+
+section.hero a div.pow:hover{
+  animation: jiggle .25s infinite;
+}
+
+section.hero a div.pow-hero div.powtxt{
+  color: #F4F4F1;
+}
+
+section.content div.colorBar{
+  background-color: #F4F4F1;
+  height: 80px;
+  margin-left: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #282E34;
+  margin-top: 80px;
+  transition: background-color .5s, color .5s;
+
+}
+
+section.content div.colorBar div.orient{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.content div.colorBar div.orient div.colors{
+  display: flex;
+  font-family: "Circular Black"
+}
+
+section.content div.colorBar div.orient div.colors div:hover{
+  cursor: pointer;
+}
+
+section.content div.colorBar div.orient div.colors div{
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+
+}
+
+section.content div.page1{
+  position: relative;
+  margin-left: 96px;
+  background-color: #282E34;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+section.content div.page1 div.img{
+  background-image: url(assets/P1013633.JPG);
+  height: 90%;
+  width: 40%;
+  margin-left: 2%;
+  background-size: cover;
+}
+section.content div.page1 div.text{
+  align-content: center;
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+  color: #F4F4F1;
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+
+section.content div.page2{
+  position: relative;
+  margin-left: 96px;
+  background-color: #F4F4F1;
+  display: flex;
+  flex-direction: row-reverse;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+section.content div.page2 div.img{
+  background-image: url(assets/corrocup.png);
+  height: 90%;
+  width: 40%;
+  margin-right: 2%;
+  background-size: cover;
+}
+section.content div.page2 div.text{
+  align-content: center;
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+  color: #282E34;
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+
+section.content div.page3{
+  position: relative;
+  margin-left: 96px;
+  background-color: #D03325;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+section.content div.page3 svg{
+  height: 80%;
+  margin:auto;
+}
+section.content div.page3 div.text{
+  align-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  color: #F4F4F1;
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+section.itsKindOf{
+  position: relative;
+  margin-left: 96px;
+  top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #F4F4F1;
+  height: 40vh;
+  margin-bottom: 64px;
+}
+
+section.itsKindOf div{
+  font-size: 64px;
+}
+
+section.abtCont{
+  position: relative;
+  margin-left: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #282E34;
+}
+
+section.abtCont div{
+  width: 40%;
+  color: #F4F4F1;
+  font-size: 32px;
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+section.buyBack video{
+  position: absolute;
+  object-fit: cover;
+  min-width: 100%;
+  right: 0px;
+  height: 100vh;
+}
+
+section.buyCups{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100vh - 80px);
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+section.buyCups div{
+  width: 10%;
+  padding-left: 8%;
+  padding-right: 8%;
+  z-index: 3;
+}
+
+svg.powcircle{
+  width: 24%;
+  animation: spin 3.5s linear infinite;
+  position: absolute;
+  z-index: 2;
+  transition: left .5s;
+}
+
+section.cupCounter{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 0vh;
+  align-items: center;
+  justify-content: center;
+  top: 80%;
+  background-color: blue;
+}
+
+section.cupCounter div{
+  width: 10%;
+  margin-left: 8%;
+  margin-right: 8%;
+  z-index: 3;
+  text-align: center;
+  font-size: 64px;
+  color: #F4F4F1;
+}
+section.buyCups div:hover{
+  cursor: pointer;
+}
+
+div.reset{
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  color: white;
+  font-size: 48px;
+  z-index: 5;
+}
+
+div.buy{
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  color: white;
+  font-size: 48px;
+  z-index: 5;
+}
+
+div.buy:hover{
+  cursor: pointer;
+}
+div.reset:hover{
+  cursor: pointer;
+}
+
+#cup{
+  position: relative;
+}
+
+#pow{
+  stroke: #000000;
+  stroke-width: 2px;
+}
