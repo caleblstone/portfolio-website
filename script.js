@@ -50,12 +50,10 @@ project.forEach((item, i) => {
     if (item.classList.contains("done")) {
       projectGrid.style.display = "none"
       let identity = item.id + "Expanded"
-      console.log(identity);
       let expanded = document.getElementById(identity)
       expanded.style.display = "flex"
       projectTitle.style.display = "block"
       let name = item.querySelector("div.name").textContent
-      console.log(name);
       projectTitle.innerHTML = name
       projectTitle.style.color = "#FE4818"
       home.style.textDecoration = "none"
