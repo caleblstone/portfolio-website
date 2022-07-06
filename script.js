@@ -1,4 +1,5 @@
 let project = document.querySelectorAll("div.project")
+let projects = document.querySelector("div.projects")
 let projectGrid = document.querySelector("div.projectGrid")
 let home = document.querySelector("div.home header")
 let button = document.querySelectorAll("div.button")
@@ -6,9 +7,11 @@ let expanded = document.querySelectorAll("div.expanded")
 let about = document.querySelector("div.about")
 let contact = document.querySelector("div.contact")
 let bioButtons = document.querySelectorAll("div.bioButton")
+let bio = document.querySelector("div.bio")
 let projectTitle = document.querySelector("div.proj header")
 let aboutT = document.querySelector("div.bioAbout")
 let contactT = document.querySelector("div.bioContact")
+let infoMobile = document.querySelector("div.aboutMobile header")
 
 home.addEventListener("mouseover", function(){
   home.style.cursor = "pointer"
@@ -20,17 +23,22 @@ home.addEventListener("click", function(){
     item.style.display = "none"
   });
   projectTitle.style.display = "none"
+  infoMobile.style.display = "block"
   home.style.textDecoration = "underline"
   home.innerHTML = "Caleb Stone"
 })
 
 bioButtons[0].addEventListener("click", function(){
+  bio.style.display = "none"
+  projects.style.display = "block"
+})
+bioButtons[1].addEventListener("click", function(){
   about.style.display = "block"
   contact.style.display = "none"
   aboutT.style.textDecoration = "underline"
   contactT.style.textDecoration = "none"
 })
-bioButtons[1].addEventListener("click", function(){
+bioButtons[2].addEventListener("click", function(){
   about.style.display = "none"
   contact.style.display = "block"
   aboutT.style.textDecoration = "none"
@@ -53,6 +61,7 @@ project.forEach((item, i) => {
       let expanded = document.getElementById(identity)
       expanded.style.display = "flex"
       projectTitle.style.display = "block"
+      infoMobile.style.display = "none"
       let name = item.querySelector("div.name").textContent
       projectTitle.innerHTML = name
       projectTitle.style.color = "#FE4818"
@@ -61,3 +70,9 @@ project.forEach((item, i) => {
     }
   })
 });
+
+infoMobile.addEventListener("click", function(){
+  bio.style.display = "flex"
+  projects.style.display = "none"
+
+})
