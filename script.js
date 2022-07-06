@@ -13,6 +13,10 @@ let aboutT = document.querySelector("div.bioAbout")
 let contactT = document.querySelector("div.bioContact")
 let infoMobile = document.querySelector("div.aboutMobile header")
 
+if(window.innerWidth > 800){
+  infoMobile.style.display = "none"
+}
+
 home.addEventListener("mouseover", function(){
   home.style.cursor = "pointer"
 
@@ -23,9 +27,13 @@ home.addEventListener("click", function(){
     item.style.display = "none"
   });
   projectTitle.style.display = "none"
-  infoMobile.style.display = "block"
+  
   home.style.textDecoration = "underline"
   home.innerHTML = "Caleb Stone"
+
+  if(window.innerWidth < 800){
+    infoMobile.style.display = "block"
+  }
 })
 
 bioButtons[0].addEventListener("click", function(){
