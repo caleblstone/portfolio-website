@@ -125,6 +125,9 @@ div.bio{
   animation-timing-function: ease-in-out;
   overflow: scroll;
 }
+div.biohome{
+  display: none;
+}
 
 /* EXPANDED SECTION */
 div.expanded{
@@ -252,4 +255,67 @@ div.contact{
   font-family: cursive;
   margin-top: 24px;
   margin-bottom: 24px;
+}
+
+
+@media screen and (max-width: 800px){
+  header{
+    font-size: 1.8em;
+  }
+  div.aboutMobile header{
+    text-decoration: underline;
+  }
+  
+  div.bio{
+    display: none;
+    
+    flex-direction: column;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+  }
+
+  div.name{
+    font-size: 2em;
+  }
+
+  div.projects{
+    width: 100%;
+  }
+  div.project{
+    display: flex; 
+    flex-direction: column; 
+  }
+  div.client{
+    writing-mode: horizontal-tb;
+    
+    border-right: none;
+  }
+  div.clientWords{
+    transform: none;
+  }
+  div.name{
+    border-top: 4px solid black;
+    border-left: none;
+    border-bottom: 4px solid black;
+    border-right: none;
+  }
+  div.typetime{
+    display: flex;
+    flex-direction: row;
+  }
+  div.type{
+    border-bottom: none;
+    border-right: 4px solid black;
+  }
+
+  div.introduction{
+    font-size: 1.8em;
+  }
+  div.biohome{
+    display: block;
+  }
+
+
+
 }
